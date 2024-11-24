@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_morning"
+    tools:context="view.ui.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/im_weather_icon"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/ic_clear_sky_morning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <TextView
+        android:id="@+id/tv_min_max_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23\u00B0/19\u00B0"
+        android:textColor="#99FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <TextView
+        android:id="@+id/tv_current_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23\u00B0"
+        android:textColor="@color/white"
+        android:textSize="62sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_week_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp"
+        android:paddingRight="20dp"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sp_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/background_transperant"
+        android:minHeight="20dp"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:entries="@array/city_name"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:spinnerMode="dialog"
+        android:textAllCaps="false"
+        android:text="Paris"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:theme="@style/spinnerStyle"
+        app:layout_constraintEnd_toEndOf="@+id/tv_min_max_degree"
+        app:layout_constraintTop_toBottomOf="@+id/tv_min_max_degree" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_days"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:fadeScrollbars="false"
+        android:overScrollMode="never"
+        android:paddingBottom="20dp"
+        android:paddingTop="32dp"
+        tools:listitem="@layout/item_days"
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

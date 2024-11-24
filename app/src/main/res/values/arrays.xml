@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="city_name">
+        <item>Tunis</item>
+        <item>Kelibia</item>
+        <item>Nabeul</item>
+        <item>Bizert</item>
+    </string-array>
+</resources>
